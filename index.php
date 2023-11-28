@@ -18,6 +18,9 @@ if ($conn->connect_error) {
 //     name VARCHAR(10) NOT NULL
 // )";
 
+$sql = "INSERT INTO role (name)
+VALUES ('client')";
+
 // INSERT INTO role (name) VALUES ('admin'), ('client');
 // SQL to create table
 // $sql = "CREATE TABLE IF NOT EXISTS transactions (
