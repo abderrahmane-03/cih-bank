@@ -31,7 +31,7 @@ if (isset($_POST['valid'])) {
                 exit();
             } else {
                 // Client role, redirect to client page
-                header("Location: clientpage.php");
+                header("Location: clientdashboard.php");
                 exit();
             }
         } else {
