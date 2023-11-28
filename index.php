@@ -13,16 +13,22 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// $sql= "CREATE TABLE IF NOT EXISTS role (
+//     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+//     name VARCHAR(10) NOT NULL
+// )";
+
+// INSERT INTO role (name) VALUES ('admin'), ('client');
 // SQL to create table
-$sql = "CREATE TABLE IF NOT EXISTS adresse (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    ville VARCHAR(30) NOT NULL,
-    quartier VARCHAR(30) NOT NULL,
-    rue VARCHAR(30) NOT NULL,
-    codepostal INT(8) NOT NULL,
-    email VARCHAR(30) NOT NULL,
-    telephone INT(10) NOT NULL 
-)";
+// $sql = "CREATE TABLE IF NOT EXISTS transactions (
+//     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+//     amount INT(30) NOT NULL,
+//     currency INT(6) UNSIGNED,
+//     type varchar () 
+
+//     FOREIGN KEY (compte_id) REFERENCES compte(id)
+// )";
+
 
 if ($conn->query($sql) === TRUE) {
     echo "success";
