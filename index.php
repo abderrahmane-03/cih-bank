@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root"; // Change to your database username
 $password = ""; // Change to your database password
-$dbname = "clientsdb";
+$dbname = "cihdb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,22 +14,21 @@ if ($conn->connect_error) {
 }
 
 // SQL to create table
-$sql = "CREATE TABLE IF NOT EXISTS Myclients (
+$sql = "CREATE TABLE IF NOT EXISTS adresse (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(30) NOT NULL,
-    lastname VARCHAR(30) NOT NULL,
-    email VARCHAR(50),
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ville VARCHAR(30) NOT NULL,
+    quartier VARCHAR(30) NOT NULL,
+    rue VARCHAR(30) NOT NULL,
+    codepostal INT(8) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    telephone INT(10) NOT NULL 
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "";
+    echo "success";
 } else {
     echo "Error creating table: " . $conn->error;
 }
-// Fetch data from the table
-$sql = "SELECT id, firstname, lastname, email, reg_date FROM Myclients";
-$result = $conn->query($sql);
 
 $conn->close();
 ?>
