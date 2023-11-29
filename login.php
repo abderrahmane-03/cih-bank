@@ -27,11 +27,11 @@ if (isset($_POST['valid'])) {
             // Check the user's role
             if ($roleId == 1) {
                 // Admin role, redirect to admin dashboard
-                header("Location: admindashboard.php");
+                header("Location: admindashboardusers.php");
                 exit();
             } else {
                 // Client role, redirect to client page
-                header("Location: clientdashboard.php");
+                header("Location: clientdashboardaccounts.php");
                 exit();
             }
         } else {

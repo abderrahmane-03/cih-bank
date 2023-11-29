@@ -38,22 +38,12 @@ if ($conn->connect_error) {
 
 
 
-// SQL to create table
-// $sql = "CREATE TABLE IF NOT EXISTS transactions (
-//     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-//     amount INT(30) NOT NULL,
-//     currency INT(6) UNSIGNED,
-//     type varchar () 
 
-//     FOREIGN KEY (compte_id) REFERENCES compte(id)
-// )";
-
-
-if ($conn->query($sql) === TRUE) {
-    echo "success";
-} else {
-    echo "Error creating table: " . $conn->error;
-}
+// if ($conn->query($sql) === TRUE) {
+//     echo "success";
+// } else {
+//     echo "Error creating table: " . $conn->error;
+// }
 
 $conn->close();
 ?>
